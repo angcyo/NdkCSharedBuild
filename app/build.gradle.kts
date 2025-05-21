@@ -6,6 +6,9 @@ plugins {
 android {
     namespace = "com.angcyo.ndkcsharedbuild"
     compileSdk = 34
+    //ndkVersion = "27.0.12077973"
+    //ndkVersion = "27.2.12479018"
+    ndkVersion = "28.1.13356709"
 
     defaultConfig {
         applicationId = "com.angcyo.ndkcsharedbuild"
@@ -20,6 +23,10 @@ android {
             cmake {
                 cppFlags += "-std=c++11 -frtti -fexceptions"
                 arguments += "-DANDROID_STL=c++_shared"
+                /*arguments += listOf(
+                    "-DANDROID_STL=c++_shared",
+                    "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                )*/
             }
         }
     }
