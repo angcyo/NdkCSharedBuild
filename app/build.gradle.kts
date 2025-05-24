@@ -7,8 +7,8 @@ android {
     namespace = "com.angcyo.ndkcsharedbuild"
     compileSdk = 34
     //ndkVersion = "27.0.12077973"
-    //ndkVersion = "27.2.12479018"
-    ndkVersion = "28.1.13356709"
+    //ndkVersion = "27.2.12479018" //需要配置-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON
+    ndkVersion = "28.1.13356709"   //默认开启16KB
 
     defaultConfig {
         applicationId = "com.angcyo.ndkcsharedbuild"
@@ -47,6 +47,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    // 配置CMake之后, 项目中就会出现 Create JNI function, 就可以创建jni签名了.
     externalNativeBuild {
         cmake {
             path = file("src/main/cpp/CMakeLists.txt")

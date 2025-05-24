@@ -1,8 +1,7 @@
 package com.angcyo.ndkcsharedbuild
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.angcyo.ndkcsharedbuild.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
